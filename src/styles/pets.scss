@@ -1,0 +1,82 @@
+@import './style.scss';
+
+
+.cards__list {
+  display: flex;
+  column-gap: 40px;
+  row-gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 60px;
+  @include media-tablet {
+    width: 708px;
+    margin-bottom: 40px;
+    .card-pets:nth-child(7) {
+      display: none;
+    }
+    .card-pets:nth-child(8) {
+      display: none;
+    }
+  }
+  @include media-phone {
+    width: 270px;
+    margin-bottom: 42px;
+    .card-pets:nth-child(4) {
+      display: none;
+    }
+    .card-pets:nth-child(5) {
+      display: none;
+    }
+    .card-pets:nth-child(6) {
+      display: none;
+    }
+    .card-pets:nth-child(7) {
+      display: none;
+    }
+    .card-pets:nth-child(8) {
+      display: none;
+    }
+  }
+}
+.pets__title--small {
+  @include media-tablet {
+    margin-bottom: 29px;
+  }
+  
+}
+.pets--small {
+  @include media-tablet {
+    padding: 81px 0 76px;
+  }
+  
+  @include media-phone {
+    padding: 42px 0 43px;
+  }
+}
+
+.pagination {
+  margin: 0 auto;
+  display: flex;
+  width: 340px;
+  justify-content: space-between;
+  @include media-phone {
+    width: 300px;
+  }
+  &__state {
+    border: solid 2px $primary-color;
+    background-color: $primary-color;
+    color: $dark-color;
+    border-radius: 100px;
+    min-width: 48px;
+    min-height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: $georgia-font;
+    font-size: 20px;
+    line-height: 23px;
+    letter-spacing: 1px;
+    cursor: default;
+  }
+}
